@@ -1,0 +1,8 @@
+.container > div {
+    border: 2px solid grey;
+    padding: 10px;
+    margin-inline: 35%;
+}
+p {
+    margin: 10px 0px;
+}

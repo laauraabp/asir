@@ -1,0 +1,45 @@
+*  {
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+}
+.container {
+    margin-inline: 30%;
+}
+h1, form, a {
+    margin: 10px 5px;
+}
+h1 {
+    background-color: orange;
+    color: blue;
+    font-weight: 500;
+    font-size: larger;
+    display: inline-block;
+    
+}
+form {
+    padding: 10px;
+    border: solid 5px black;
+    background-color: #ffff00;
+}
+form > div {
+    margin: 5px;
+}
+label, input, select, p{
+    display: inline-block;
+}
+label {
+    width: 40%;
+    text-align: center;
+}
+input, select {
+    font-size: 14px;
+}
+
+
+#numAfiliadoInput01 {
+    width: 100px;
+}
+#numAfiliadoInput02 {
+    width: 50px;
+}

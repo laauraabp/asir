@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script>
+        function valor(valorTecla) {
+            document.getElementById("input").value += valorTecla;
+        }
+
+        function resultado() {
+            var res = eval(document.getElementById("input").value)
+            document.getElementById("input").value = res.toFixed(2);
+        }
+
+        function borrar() {
+            document.getElementById("input").value = "";
+        }
+
+
+    </script>
+    <div class="container" >
+        <div class="calculadora">
+            <input type="text" id="input">
+            <button id="button00" value="" name="tecla" class="tecla" onclick="borrar()">AC</button>
+            <button id="button01" value="/" name="tecla" class="tecla" onclick="valor(value)">/</button>
+            <button id="button02" value="*" name="tecla" class="tecla" onclick="valor(value)">*</button> 
+            <button id="button03" value="-" name="tecla" class="tecla" onclick="valor(value)">-</button><br>
+
+
+
+            <button id="button04" value="7" name="tecla" class="tecla" onclick="valor(value)">7</button>
+            <button id="button05" value="8" name="tecla" class="tecla" onclick="valor(value)">8</button>
+            <button id="button06" value="9" name="tecla" class="tecla" onclick="valor(value)">9</button>
+            <button id="button07" value="+" name="tecla" class="tecla" onclick="valor(value)">+</button> <br>
+            <button id="button08" value="4" name="tecla" class="tecla" onclick="valor(value)">4</button>
+            <button id="button09" value="5" name="tecla" class="tecla" onclick="valor(value)">5</button>
+            <button id="button10" value="6" name="tecla" class="tecla" onclick="valor(value)">6</button><br>
+            <button id="button11" value="1" name="tecla" class="tecla" onclick="valor(value)">1</button>
+            <button id="button12" value="2" name="tecla" class="tecla" onclick="valor(value)">2</button>
+            <button id="button13" value="3" name="tecla" class="tecla" onclick="valor(value)">3</button>
+            <button id="button14" value="=" name="tecla" class="tecla" onclick="resultado()">=</button>
+            <button id="button15" value="0" name="tecla" class="tecla" onclick="valor(value)">0</button>
+            <button id="button16" value="." name="tecla" class="tecla" onclick="valor(value)">.</button>
+            
+        </div>
+    </div>
+</body>
+</html>
