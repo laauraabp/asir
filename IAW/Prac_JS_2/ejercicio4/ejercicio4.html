@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Ejercicio4</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script>
+        function enviar() {
+            nombre = document.getElementById("nombreInput").value;
+            primerApellido = document.getElementById("primerApeInput").value;
+            segundoApellido = document.getElementById("segundoApeInput").value;
+            correo = document.getElementById("correoInput").value;
+            compCorreo = "";
+            for (var i = 0; i < correo.length; i++) {
+                if (correo[i] == "@"){
+                    compCorreo = true;
+                }
+                else {
+                    compCorreo = false;
+                }
+            }
+            selectAfiliado = document.getElementById("numAfiliadoSelect").selectedIndex;
+            valueSelecAfiliado = document.getElementById("numAfiliadoSelect").options[selectAfiliado].value;
+            numAfiliadoUno = document.getElementById("numAfiliadoInput01").value;
+            numAfiliadoDos = document.getElementById("numAfiliadoInput02").value;
+
+            if (nombre.length == 0) {
+                alert("El campo nombre se encuentra vacio");
+            }
+            if (primerApellido.length == 0) {
+                alert("El campo primer apellido se encuentra vacio");
+            }
+            if (segundoApellido.length == 0) {
+                alert("El campo segundo apellido se encuentra vacio");
+            } 
+            if (correo.length == 0) {
+                alert("El campo correo se encuentra vacio");
+            }
+            else if (compCorreo == false) {
+                alert("El campo correo debe contener un '@'")
+            }
+
+            if(selectAfiliado == 0) {
+                alert("Debe seleccionar algo en el campo numero de afiliado de la S.S.");
+            }
+
+            if (numAfiliadoUno.length != 7) {
+                alert("El primer numero de SS debe ser un número de 7 dígitos")
+            }
+            if (numAfiliadoDos.length != 1 && numAfiliadoDos != 2 ) {
+                alert("El segundo numero de SS debe ser un número de 1 o 2 dígitos")
+            }
+            
+
+        }
+
+    </script>
+    <div class="container">
+        <div class="title">
+            <h1>Solicitud del Informe de Vida Laboral</h1>
+        </div>
+        <div class="formulario">
+            <form>
+                <div class="nombreForm">
+                    <label for="">Nombre:</label>
+                    <input type="text" name="" id="nombreInput">
+                </div>
+                <div class="primerApeForm">
+                    <label for="">Primer Apellido:</label>
+                    <input type="text" name="" id="primerApeInput">
+                </div>
+                <div class="segundoApeForm">
+                    <label for="">Segundo Apellido:</label>
+                    <input type="text" name="" id="segundoApeInput">
+                </div>
+                <div class="correoForm">
+                    <label for="">Correo electronico:</label>
+                    <input type="text" name="" id="correoInput">
+                </div>
+                <div class="numAfiliadoForm">
+                    <label for="">Numero de afiliado a la S.S.:</label>
+                    <select id="numAfiliadoSelect">
+                        <option value="">Elegir</option>
+                        <option value="A Coruña">A CORUÑA</option>
+                    </select>
+                    <p>/</p>
+                    <input type="number" name="" id="numAfiliadoInput01">
+                    <p>/</p>
+                    <input type="number" name="" id="numAfiliadoInput02">
+
+                </div>
+
+            </form>
+            <div class="links">
+                <a href="#" onclick="enviar()">Enviar</a>
+                <a href="#">Borrar</a>
+
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
